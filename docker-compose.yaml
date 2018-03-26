@@ -1,0 +1,6 @@
+version: '3'
+services:
+  hello:
+     build: 
+       context: .
+       dockerfile: Dockerfile_jar
