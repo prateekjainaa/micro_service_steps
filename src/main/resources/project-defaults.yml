@@ -1,0 +1,20 @@
+logger: 
+   level: DEBUG
+   
+swarm:     
+  datasources:
+    data-sources:
+      MyDS:
+        driver-name: mysql
+        connection-url: jdbc:mysql://localhost:6000/micro_profile
+        user-name: root
+        password: '!Whoru01'
+        connection-checker-class-name: org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker
+        background-validation: true
+        exception-sorter-class-name: org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter
+
+    #jdbc-drivers:
+     # mysql:
+      #  driver-class-name: com.mysql.jdbc.Driver
+       # xa-datasource-name: com.mysql.jdbc.jdbc2.optional.MysqlXADataSource
+       # driver-module-name: com.mysql.jdbc
