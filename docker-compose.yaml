@@ -3,4 +3,4 @@ services:
   hello:
      build: 
        context: .
-       dockerfile: Dockerfile_jar
+       dockerfile: Dockerfile
