@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: swarm-service
+spec:
+  selector:
+    app: swarm-rc-pod
+  ports:
+    - name: web
+      port: 8080
+---
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: swarm-rc
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: swarm-rc-pod
+    spec:
+      containers:
+      - name: swarm
+        image: prateekjainaa/jpa-working:1
+        ports:
+        - containerPort: 8080

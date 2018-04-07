@@ -1,4 +1,4 @@
-FROM openjdk:8u151-jdk-alpine3.7
+FROM openjdk:10-jdk-slim
 RUN mkdir /app
 COPY ./target/hello-service-swarm.jar /app/
 WORKDIR /app

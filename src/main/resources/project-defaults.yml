@@ -6,7 +6,7 @@ swarm:
     data-sources:
       MyDS:
         driver-name: mysql
-        connection-url: jdbc:mysql://localhost:6000/micro_profile
+        connection-url: jdbc:mysql://mysql-service:3306/micro_profile
         user-name: root
         password: '!Whoru01'
         connection-checker-class-name: org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker
